@@ -1,0 +1,27 @@
+{
+  "name": "trabalho-programa-o-para-internet-21-02",
+  "version": "1.0.0",
+  "description": "trabalho",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02.git"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "javascript",
+    "programação"
+  ],
+  "author": "Miguel Garcia Aviles",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02/issues"
+  },
+  "homepage": "https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02#readme"
+}
