@@ -98,6 +98,43 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .janela-det{
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    top:0;
+    left: 0;
+    background-color: #00000080;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+  }
+
+  .janela{
+    width: 60%;
+    min-width: 450px;
+    min-height: 200px;
+    background-color: #fff;
+    backdrop-filter: blur(10px);
+    padding: 50px;
+    border-radius: 20px;
+  }
+
+  .fechar{
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 0;
+    background-color: red;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+  }
 </style>
 <body>
   <h1>Event world</h1>
@@ -113,6 +150,7 @@
           <div class="btn">Ver detalhes</div>
           <div class ="janela-det" id="janela-det">
               <div class="janela">
+                <button class="fechar" id="fechar">X</button>
                   <h3>detalhes</h3>
                   <p>O clássico entre Palmeiras e Corinthians é sempre um dos jogos mais aguardados do futebol brasileiro. Com uma rivalidade histórica, as duas equipes protagonizam um espetáculo cheio de emoção e tensão a cada encontro.</p>
               </div>
@@ -127,6 +165,7 @@
           <div class="btn">Ver detalhes</div>
           <div class ="janela-det" id="janela-det">
               <div class="janela">
+                <button class="fechar" id="fechar">X</button>
                   <h3>detalhes</h3>
                   <p>Um show de Zé Ramalho é uma experiência única e envolvente, onde sua voz marcante e suas músicas atemporais encantam o público. Com um repertório repleto de sucessos que atravessam gerações, o artista cria uma atmosfera nostálgica e emocionante.</p>
               </div>
@@ -141,6 +180,7 @@
           <div class="btn">Ver detalhes</div>
           <div class ="janela-det" id="janela-det">
               <div class="janela">
+                <button class="fechar" id="fechar">X</button>
                   <h3>detalhes</h3>
                   <p>Um show de humor de Danilo Gentili é garantia de risadas do início ao fim. Com seu estilo ácido e irreverente, o comediante aborda temas cotidianos de forma satírica e inteligente, conquistando o público com seu humor afiado.</p>
               </div>
@@ -155,6 +195,7 @@
           <div class="btn">Ver detalhes</div>
           <div class ="janela-det" id="janela-det">
               <div class="janela">
+                <button class="fechar" id="fechar">X</button>
                   <h3>detalhes</h3>
                   <p>Um show de humor de Leo Lins é uma experiência hilariante e surpreendente. Com seu humor ácido e perspicaz, o comediante aborda temas do cotidiano de forma irreverente e inteligente, arrancando gargalhadas da plateia.</p>
               </div>
