@@ -23,5 +23,8 @@
   "bugs": {
     "url": "https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02/issues"
   },
-  "homepage": "https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02#readme"
+  "homepage": "https://github.com/MGAviles25/trabalho-programa-o-para-internet-21-02#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
