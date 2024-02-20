@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Eventos</title>
+</head>
+<style>
+  h1 {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    height: 200px;
+  }
+
+  body {
+    background: url("imgfun.png");
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .eventos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+  }
+  
+  .evento {
+    background-color: #f0f0f0;
+    padding: 1rem;
+    border-radius: 5px;
+  }
+  
+  .evento h2 {
+    margin-top: 0;
+  }
+  
+  .evento button {
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .evento button:hover {
+    background-color: #0056b3;
+  }
+
+  .eventos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .evento {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 20px;
+    width: 48%;
+  }
+  
+  .evento h2 {
+    margin-top: 0;
+  }
+  
+  .evento button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin-top: 10px;
+  }
+  
+  .evento button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<body>
+  <h1>Eventos disponíveis</h1>
+  <div class="eventos">
+    <div class="eventos">
+        <div class="evento">
+          <h2>Corinthians X Palmeiras</h2>
+          <p>Data: 04/04/2024</p>
+          <p>Local: Maracanã, Rio de jandeiro - RJ</p>
+          <p>Preço: R$ 50,00</p>
+          <button onclick="window.location.href='/evento/1'">Ver detalhes</button>
+        </div>
+        <div class="evento">
+          <h2>Show Zé Ramalho</h2>
+          <p>Data: 05/05/2024</p>
+          <p>Local: Bosque Marechal Cândido Rondon, Lonrina - PR</p>
+          <p>Preço: R$ 100,00</p>
+          <button onclick="window.location.href='/evento/2'">Ver detalhes</button>
+        </div>
+        <div class="evento">
+        <h2>Show Danilo Gentili</h2>
+          <p>Data: 06/06/2024</p>
+          <p>Local: Teatro municipal, Presidente Prudente - SP</p>
+          <p>Preço: R$ 150,00</p>
+          <button onclick="window.location.href='/evento/3'">Ver detalhes</button>
+        </div>
+        <div class="evento">
+          <h2>Turne Leo Lins 4</h2>
+          <p>Data: 07/07/2024</p>
+          <p>Local: Teatro municipal, Marília - Sp</p>
+          <p>Preço: R$ 200,00</p>
+          <button onclick="window.location.href='/evento/4'">Ver detalhes</button>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
