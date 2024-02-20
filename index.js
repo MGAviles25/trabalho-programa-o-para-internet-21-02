@@ -1,5 +1,5 @@
 import express from 'express';
-import process from 'express';
+import process from 'process';
 import path from 'path';
 
 const host= "0.0.0.0";
@@ -10,6 +10,6 @@ const app = express();
 app.use(express.static(path.join(process.cwd(), 'html')))
 
 app.listen(porta, host, ()=>{
-    console.log('Servidor escutando em http://${host}:${porta}')
+    console.log(`Servidor escutando em http://${host}:${porta}`)
 
 })
