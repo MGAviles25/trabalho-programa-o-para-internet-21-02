@@ -1,48 +1,50 @@
-document.getElementById("cadastroForm").addEventListener("submit", function(event){
-    event.preventDefault();
-    let formData = new FormData(this);
-    let formObject = {};
-    formData.forEach(function(value, key){
-        formObject[key] = value;
-    });
-    console.log(formObject);
-    
-});
+document.getElementById("cadastroForm").addEventListener("submit", function(event) {
+  let nome = document.getElementById("nome").value.trim();
+  let telefone = formatarTelefone(document.getElementById("telefone").value.trim());
+  let email = document.getElementById("email").value.trim();
+  let dataNascimento = document.getElementById("dataNascimento").value.trim();
+  let cidade = document.getElementById("cidade").value.trim();
+  let senha = document.getElementById("senha").value.trim();
 
-function validarCadastro() {
-    let nome = document.getElementById("nome");
-
-    let isValid = true;
-
-    if (nome.value.trim() === "") {
-      nome.classList.add("invalid");
-      isValid = false;
-    } else {
-      nome.classList.remove("invalid");
-    }
-
-    let email = document.getElementById("email");
-
-    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailRegex.test(email.value.trim())) {
-      email.classList.add("invalid");
-      isValid = false;
-    } else {
-      email.classList.remove("invalid");
-    }
-
-    let senha = document.getElementById("senha");
-    if (senha.value.trim().length < 6) {
-      senha.classList.add("invalid");
-      isValid = false;
-    } else {
-      senha.classList.remove("invalid");
-    }
-
-    return isValid;
+  if (nome === "" || telefone === "" || email === "" || dataNascimento === "" || cidade === "" || senha === "") {
+      alert("Por favor, preencha todos os campos.");
+      event.preventDefault();
+      return;
   }
 
-  function validarTelefone(telefone) {
-    let regex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
-    return regex.test(telefone);
+  if (!validarEmail(email)) {
+      alert("Por favor, insira um endereço de e-mail válido.");
+      event.preventDefault();
+      
+      return;
+  }
+
+  if (!validarLetras(cidade)) {
+      alert("Por favor, insira apenas letras no campo da cidade.");
+      event.preventDefault();
+      return;
+  }
+});
+
+function validarLetras(texto) {
+  let regex = /^[a-zA-ZÀ-ú\s]+$/;
+  return regex.test(texto);
+}
+
+function formatarTelefone(telefone) {
+  
+  let numeros = telefone.replace(/\D/g, "");
+
+  if (numeros.length === 11) {
+      return numeros.replace(/(\d{2})(\d{5})(\d{4})/, "($1) $2-$3");
+  } else if (numeros.length === 10) {
+      return numeros.replace(/(\d{2})(\d{4})(\d{4})/, "($1) $2-$3");
+     
+  }
+}
+
+function validarEmail(email) {
+  let regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return regex.test(email);
+  
 }
