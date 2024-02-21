@@ -9,9 +9,10 @@ const app = express();
 
 app.use(express.static(path.join(process.cwd(), 'html')))
 app.use(express.static(path.join(process.cwd(), 'cadastro')))
+app.use(express.static(path.join(process.cwd(), 'detalhes')))
 
 app.get('/', (req, res) => {
-    
+
     res.sendFile(path.join(process.cwd(), 'html', 'pagina.html'));
 
 });
