@@ -7,6 +7,7 @@
 </head>
 <style>
   h1 {
+    color: #fff;
     display: flex; 
     align-items: center; 
     justify-content: center; 
@@ -14,8 +15,9 @@
   }
 
   body {
-    
-    background: url('imgfun.jpg');
+    background-image: url('fundor.jpg');
+    background-size: cover;
+    background-position: center;
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -58,12 +60,13 @@
   }
   
   .evento {
-    background-color: #f2f2f2;
+    background-color: #d37575;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     padding: 20px;
     width: 48%;
+    background-image: url('branco.jpg');
   }
   
   .evento h2 {
@@ -81,12 +84,19 @@
     margin-top: 10px;
   }
   
+  .evento img {
+    max-width: 200px;
+    border-radius: 5px;
+    margin-left: 65%;
+  }
+  
   .evento button:hover {
     background-color: #0056b3;
   }
 
   p {
-    text-align: center;
+    color: #ff7b00;
+    text-align: left;
     margin-top: 10px;
   }
   
@@ -110,6 +120,7 @@
           <p>Data: 04/04/2024</p>
           <p>Local: Maracanã, Rio de jandeiro - RJ</p>
           <p>Preço: R$ 50,00</p>
+          <img src="palxco.jpeg" alt="Img 1">
           <button onclick="window.location.href='/evento/1'">Ver detalhes</button>
         </div>
         <div class="evento">
@@ -117,20 +128,24 @@
           <p>Data: 05/05/2024</p>
           <p>Local: Bosque Marechal Cândido Rondon, Lonrina - PR</p>
           <p>Preço: R$ 100,00</p>
+          <img src="zeze.jpg" alt="Img 2">
           <button onclick="window.location.href='/evento/2'">Ver detalhes</button>
         </div>
         <div class="evento">
+          
         <h2>Show Danilo Gentili</h2>
           <p>Data: 06/06/2024</p>
           <p>Local: Teatro municipal, Presidente Prudente - SP</p>
           <p>Preço: R$ 150,00</p>
+          <img src="dandan.jpg" alt="Img 3">
           <button onclick="window.location.href='/evento/3'">Ver detalhes</button>
         </div>
         <div class="evento">
-          <h2>Turne Leo Lins </h2>
+          <h2>Turne Léo Lins </h2>
           <p>Data: 07/07/2024</p>
           <p>Local: Teatro municipal, Marília - Sp</p>
           <p>Preço: R$ 200,00</p>
+          <img src="leleo.jpg" alt="Img 4">
           <button onclick="window.location.href='/evento/4'">Ver detalhes</button>
         </div>
       </div>
