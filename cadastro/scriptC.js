@@ -11,8 +11,7 @@ document.getElementById("cadastroForm").addEventListener("submit", function(even
 
 function validarCadastro() {
     let nome = document.getElementById("nome");
-    let email = document.getElementById("email");
-    let senha = document.getElementById("senha");
+
     let isValid = true;
 
     if (nome.value.trim() === "") {
@@ -22,6 +21,8 @@ function validarCadastro() {
       nome.classList.remove("invalid");
     }
 
+    let email = document.getElementById("email");
+
     let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(email.value.trim())) {
       email.classList.add("invalid");
@@ -30,6 +31,7 @@ function validarCadastro() {
       email.classList.remove("invalid");
     }
 
+    let senha = document.getElementById("senha");
     if (senha.value.trim().length < 6) {
       senha.classList.add("invalid");
       isValid = false;
@@ -41,7 +43,6 @@ function validarCadastro() {
   }
 
   function validarTelefone(telefone) {
-
-    let regex = /^\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}$/;
+    let regex = /^\(\d{2}\) \d{4,5}-\d{4}$/;
     return regex.test(telefone);
 }
