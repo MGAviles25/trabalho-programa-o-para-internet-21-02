@@ -112,20 +112,27 @@
   a:hover {
     text-decoration: underline;
   }
+
+  .button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff8800;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+  }
 </style>
 <body>
   <h1>Event world</h1>
-  <p>Cadastre-se já!! facíl e rápido!! <a href="cadastro.html">Cadastre-se</a></p>
-  <p>Já possui casdastro? então clique aqui!! <a href="login.html">Login</a></p>
+  <p>Cadastre-se já!! facíl e rápido!! <a href="cadastro.html" class="button">Cadastre-se</a></p>
+  <p>Já possui casdastro? então clique aqui!! <a href="login.html" class="button">Login</a></p>
   <div class="eventos">
     <div class="eventos">
         <div class="evento">
           <h2>Corinthians X Palmeiras</h2>
-          <p>Data: 04/04/2024</p>
-          <p>Local: Maracanã, Rio de jandeiro - RJ</p>
-          <p>Preço: R$ 50,00</p>
+          <p>O clássico entre Palmeiras e Corinthians é sempre um dos jogos mais aguardados do futebol brasileiro. Com uma rivalidade histórica, as duas equipes protagonizam um espetáculo cheio de emoção e tensão a cada encontro.</p>
           <img src="palxco.jpeg" alt="Img 1">
-          <button onclick="window.location.href='evento1.html'">Ver detalhes</button>
+          <a href='evento1.html' class="button">Ver detalhes</a>
         </div>
         <div class="evento">
           <h2>Show Zé Ramalho</h2>
@@ -133,7 +140,7 @@
           <p>Local: Bosque Marechal Cândido Rondon, Lonrina - PR</p>
           <p>Preço: R$ 100,00</p>
           <img src="zeze.jpg" alt="Img 2">
-          <button onclick="window.location.href='/evento/2'">Ver detalhes</button>
+          <a href='evento2.html' class="button">Ver detalhes</a>
         </div>
         <div class="evento">
           
@@ -142,7 +149,7 @@
           <p>Local: Teatro municipal, Presidente Prudente - SP</p>
           <p>Preço: R$ 150,00</p>
           <img src="dandan.jpg" alt="Img 3">
-          <button onclick="window.location.href='/evento/3'">Ver detalhes</button>
+          <a href='evento1.html' class="button">Ver detalhes</a>
         </div>
         <div class="evento">
           <h2>Turne Léo Lins </h2>
@@ -150,7 +157,7 @@
           <p>Local: Teatro municipal, Marília - Sp</p>
           <p>Preço: R$ 200,00</p>
           <img src="leleo.jpg" alt="Img 4">
-          <button onclick="window.location.href='/evento/4'">Ver detalhes</button>
+          <a href='evento1.html' class="button">Ver detalhes</a>
         </div>
       </div>
   </div>
