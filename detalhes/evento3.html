@@ -39,6 +39,26 @@
         text-decoration: none;
         border-radius: 5px;
     }
+
+    #quantidadeIngressos {
+      padding: 5px;
+      border-radius: 3px;
+      border: 1px solid #ccc;
+      width: 50px; 
+    }
+
+    .realizarCompra {
+      padding: 8px 15px;
+      background-color: #ff7300;
+      color: #000000;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+
+    .realizarCompra:hover {
+      background-color: #b37a00;
+    }
   </style>
 </head>
 <body>
@@ -63,8 +83,33 @@
     <td>Vendas de ingresso:</td>
     <td>No local</td>
   </tr>
+  <tr>
+    <td>Quantidade de Ingressos:</td>
+    <td><input type="number" id="quantidadeIngressos" name="quantidadeIngressos" min="1" value="1" onchange="calcularValorTotal()"></td>
+  </tr>
+  <tr>
+    <td>Valor Total:</td>
+    <td id="valorTotal">R$ 150,00</td>
+  </tr>
+  <tr>
+    <td colspan="2"><button class="realizarCompra" onclick="realizarCompra()">Realizar Compra</button></td>
+  </tr>
 </table>
 
 <a href='pagina.html' class="button">Voltar</a>
+<script>
+  function calcularValorTotal() {
+    var quantidadeIngressos = document.getElementById('quantidadeIngressos').value;
+    var precoIngresso = 150; 
+    var valorTotal = quantidadeIngressos * precoIngresso;
+    document.getElementById('valorTotal').textContent = 'R$ ' + valorTotal.toFixed(2);
+  }
+
+  function realizarCompra() {
+    
+    alert('Compra realizada com sucesso!');
+  }
+</script>
+
 </body>
 </html>
